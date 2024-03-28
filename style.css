@@ -240,7 +240,8 @@ nav button svg {
 
 .page2-right{
     height: 100%;
-    width: 50%;
+    width: 55%;
+  
     
 
 }
@@ -249,9 +250,35 @@ nav button svg {
    
     padding-top: 2vw;
     padding-bottom: 5vw;
-    border-bottom: 1px solid #333;
+    border-top: 1px solid #333;
+    transition: all ease .2s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
 
+}
+.right-inner {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    
+}
+.right-inner svg{
+    height: 1vw;
+}
+.right-inner h4{
+    font-weight: 400;
+    color: #888;
+    font-size: 0.9vw;
+}
+.page2-right .right-elem:hover .right-inner svg{
+    scale: 1;
+    rotate: 45deg;
+    transition: all ease .3s;
+}
+.page2-right .right-elem:hover{
+    border-top: 3px solid #fff;
 }
 .page2-right .right-elem h2{
     font-size: 1.4vw;

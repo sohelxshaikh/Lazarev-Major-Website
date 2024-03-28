@@ -39,10 +39,9 @@ function navAnimation() {
         })
     })
 }
-// navAnimation();
 
-
-var rightElems = document.querySelectorAll(".right-elem");
+function mousemoveAnimation(){
+    var rightElems = document.querySelectorAll(".right-elem");
 
 rightElems.forEach(function(elem){
     elem.addEventListener("mouseenter",function(){
@@ -69,3 +68,7 @@ rightElems.forEach(function(elem){
         })
     })
 })
+
+}
+//  mousemoveAnimation();
+//  navAnimation();
