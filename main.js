@@ -72,3 +72,24 @@ rightElems.forEach(function(elem){
 }
 //  mousemoveAnimation();
 //  navAnimation();
+
+
+var video = document.querySelector("#page3 video");
+var playbtn = document.querySelector("#page3 .circle");
+playbtn.addEventListener("click",function(){
+    video.play(),
+    gsap.to("#page3 video",{
+        opacity:1,
+        transform:"scaleX(1) scaleY(1) ",
+        borderRadius:0,
+    })
+   
+})
+video.addEventListener("click",function(){
+    video.pause()
+    gsap.to("#page3 video",{
+        opacity:0,
+        transform:"scaleX(0) scaleY(0) ",
+        borderRadius:10,
+    })
+})
