@@ -1,18 +1,19 @@
 @font-face {
     font-family: NewF;
     src: url('neue_haas_sv/NHaasGroteskTXPro-65Md.ttf');
- }
+}
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto' ,sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #fff;
 }
+
 html,
-body{
+body {
     height: 100%;
     width: 100%;
 }
@@ -92,7 +93,8 @@ nav button svg {
     z-index: 9;
     border-bottom: 1px solid #fff;
 }
-#page1{
+
+#page1 {
     height: 100vh;
     width: 100%;
     background-color: #111;
@@ -102,15 +104,17 @@ nav button svg {
     justify-content: center;
     position: relative;
 }
-#page1 h1{
+
+#page1 h1 {
     font-size: 8.5vw;
     text-transform: uppercase;
     font-weight: 900;
     line-height: 8.5vw;
     font-family: NewF;
-   
+
 }
-#page1 h1 svg{
+
+#page1 h1 svg {
     height: 6vw;
     width: 6vw;
     background-color: #33A464;
@@ -119,14 +123,14 @@ nav button svg {
 
 }
 
-#page1 p{
+#page1 p {
     text-align: center;
     font-weight: 400;
     margin-top: 3vh;
     color: #ffffffc4;
 }
 
-#page1-something{
+#page1-something {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -134,24 +138,25 @@ nav button svg {
     margin-top: 1vw;
 
 }
-#page1-something h4{
+
+#page1-something h4 {
     font-weight: 400;
     font-size: 1vw;
     text-transform: lowercase;
-    padding: 5px 10px ;
+    padding: 5px 10px;
     border: 1px solid #ffffff88;
     border-radius: 50px;
-    
-    
+
+
 }
 
-#page1-something h4:nth-last-child(2){
+#page1-something h4:nth-last-child(2) {
     border: none;
     padding: 0;
 }
 
-#moving-div{
-   
+#moving-div {
+
     position: absolute;
     bottom: 3%;
     width: 44%;
@@ -159,42 +164,46 @@ nav button svg {
     padding: 1.5vw;
     overflow: hidden;
 
-    
+
 }
 
-#blur-left{
+#blur-left {
     height: 100%;
     width: 20%;
     position: absolute;
-    background:linear-gradient(to right ,#111 ,transparent);
+    background: linear-gradient(to right, #111, transparent);
     z-index: 2;
     top: 0;
     left: 0;
 }
-#blur-right{
+
+#blur-right {
     height: 100%;
     width: 20%;
     position: absolute;
-    background:linear-gradient(to left,transparent,#111);
+    background: linear-gradient(to left, transparent, #111);
     z-index: 2;
     top: 0;
     right: 0;
 }
 
-#moving-div .move{
-   display: inline-block;
-   animation: move 15s linear infinite ;
+#moving-div .move {
+    display: inline-block;
+    animation: move 15s linear infinite;
 }
-#moving-div .move img{
+
+#moving-div .move img {
     height: 1vw;
     margin: 0 1.2vw;
 
 }
+
 @keyframes move {
-    0%{
+    0% {
         transform: translateX(0);
     }
-    100%{
+
+    100% {
         transform: translateX(-100%);
     }
 }
@@ -205,7 +214,7 @@ nav button svg {
 
 
 
-#page2{
+#page2 {
 
     height: 100vh;
     width: 100%;
@@ -218,36 +227,40 @@ nav button svg {
     justify-content: space-between;
     border-top: 1px solid #3333;
 }
-.page2-left{
+
+.page2-left {
     height: 100%;
     width: 45%;
-    
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
     padding: 3vw 0vw;
-   
+
 }
-.page2-left p{
+
+.page2-left p {
     font-size: 1vw;
 }
-.page2-left h5{
+
+.page2-left h5 {
     font-size: 1.2vw;
     width: 70%;
     font-weight: 400;
 }
 
-.page2-right{
+.page2-right {
     height: 100%;
     width: 55%;
-  
-    
+
+
 
 }
-.page2-right .right-elem{
+
+.page2-right .right-elem {
     position: relative;
-   
+
     padding-top: 2vw;
     padding-bottom: 5vw;
     border-top: 1px solid #333;
@@ -258,34 +271,41 @@ nav button svg {
 
 
 }
+
 .right-inner {
     display: flex;
     align-items: center;
     gap: 1vw;
-    
+
 }
-.right-inner svg{
+
+.right-inner svg {
     height: 1vw;
 }
-.right-inner h4{
+
+.right-inner h4 {
     font-weight: 400;
     color: #888;
     font-size: 0.9vw;
 }
-.page2-right .right-elem:hover .right-inner svg{
+
+.page2-right .right-elem:hover .right-inner svg {
     scale: 1;
     rotate: 45deg;
     transition: all ease .3s;
 }
-.page2-right .right-elem:hover{
+
+.page2-right .right-elem:hover {
     border-top: 3px solid #fff;
 }
-.page2-right .right-elem h2{
+
+.page2-right .right-elem h2 {
     font-size: 1.4vw;
     font-weight: 400;
     text-transform: capitalize;
 }
-.page2-right .right-elem img{
+
+.page2-right .right-elem img {
     height: 7vw;
     width: 7vw;
     border-radius: 50%;
@@ -294,10 +314,10 @@ nav button svg {
     opacity: 0;
     scale: 0;
     top: 0;
-   
+
 }
 
-#page3{
+#page3 {
     height: 100vh;
     widows: 100%;
     background-color: #111;
@@ -305,15 +325,17 @@ nav button svg {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
-#page3 img{
+
+#page3 img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    
+
 }
-#page3 .circle{
+
+#page3 .circle {
     position: absolute;
     height: 12vw;
     width: 12vw;
@@ -322,10 +344,11 @@ nav button svg {
     align-items: center;
     flex-direction: column;
     gap: .7vw;
-   
+
 
 }
-#page3 .circle h3{
+
+#page3 .circle h3 {
     background-color: white;
     font-size: .7vw;
     font-weight: 600;
@@ -336,24 +359,25 @@ nav button svg {
     transform: translateY(10px);
     opacity: 0;
     transition: all ease .6s;
-   
+
 }
-#page3 .circle:hover h3{
+
+#page3 .circle:hover h3 {
     opacity: 1;
     transform: translateY(0);
 }
 
-#page3 video{
+#page3 video {
     height: 100%;
     width: 100%;
     object-fit: cover;
     position: absolute;
 
-    transform: scaleX(0.7) scaleY(0)  ;
+    transform: scaleX(0.7) scaleY(0);
     border-radius: 15px;
     opacity: 0;
     z-index: 999;
-   
 
-   
+
+
 }

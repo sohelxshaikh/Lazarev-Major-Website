@@ -40,56 +40,60 @@ function navAnimation() {
     })
 }
 
-function mousemoveAnimation(){
+function mousemoveAnimation() {
     var rightElems = document.querySelectorAll(".right-elem");
 
-rightElems.forEach(function(elem){
-    elem.addEventListener("mouseenter",function(){
-       gsap.to(  elem.childNodes[3],{
-        opacity:1,
-        scale :1,
-       })
-    
-    })
-    elem.addEventListener("mouseleave",function(){
-        gsap.to(elem.childNodes[3],{
-            opacity:0,
-            scale:0
-        })
+    rightElems.forEach(function (elem) {
+        elem.addEventListener("mouseenter", function () {
+            gsap.to(elem.childNodes[3], {
+                opacity: 1,
+                scale: 1,
+            })
 
-    
-    })
-    elem.addEventListener("mousemove",function(dets){
-        console.log(dets)
-        gsap.to(elem.childNodes[3],{
-            x:dets.x - elem.getBoundingClientRect().x ,
-            y :dets.y - elem.getBoundingClientRect().y -50+"px"
-          
+        })
+        elem.addEventListener("mouseleave", function () {
+            gsap.to(elem.childNodes[3], {
+                opacity: 0,
+                scale: 0
+            })
+
+
+        })
+        elem.addEventListener("mousemove", function (dets) {
+            console.log(dets)
+            gsap.to(elem.childNodes[3], {
+                x: dets.x - elem.getBoundingClientRect().x,
+                y: dets.y - elem.getBoundingClientRect().y - 50 + "px"
+
+            })
         })
     })
-})
 
 }
+
+
+function playPauseAnimation() {
+    var video = document.querySelector("#page3 video");
+    var playbtn = document.querySelector("#page3 .circle");
+    playbtn.addEventListener("click", function () {
+        video.play(),
+            gsap.to("#page3 video", {
+                opacity: 1,
+                transform: "scaleX(1) scaleY(1) ",
+                borderRadius: 0,
+            })
+
+    })
+    video.addEventListener("click", function () {
+        video.pause()
+        gsap.to("#page3 video", {
+            opacity: 0,
+            transform: "scaleX(0) scaleY(0) ",
+            borderRadius: 10,
+        })
+    })
+}
+
 //  mousemoveAnimation();
 //  navAnimation();
-
-
-var video = document.querySelector("#page3 video");
-var playbtn = document.querySelector("#page3 .circle");
-playbtn.addEventListener("click",function(){
-    video.play(),
-    gsap.to("#page3 video",{
-        opacity:1,
-        transform:"scaleX(1) scaleY(1) ",
-        borderRadius:0,
-    })
-   
-})
-video.addEventListener("click",function(){
-    video.pause()
-    gsap.to("#page3 video",{
-        opacity:0,
-        transform:"scaleX(0) scaleY(0) ",
-        borderRadius:10,
-    })
-})
+// playPauseAnimation();
