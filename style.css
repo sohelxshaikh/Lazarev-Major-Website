@@ -381,3 +381,52 @@ nav button svg {
 
 
 }
+#page4{
+    height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    padding: 5vw 5vw;
+    font-family: NewF;
+}
+.page4-left{
+    height: 100%;
+    width: 50%;
+    
+    
+}
+.page4-left h2{
+    font-size: 3.2vw;
+    
+    color: #000000ef;
+    font-weight: 600;
+    width: 60%;
+}
+.page4-right{
+    height: 100%;
+    width: 50%;
+    gap: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.page4-right p{
+    color: #000000da;
+    font-size: 1.6vw;
+    
+}
+.page4-right .right-inner{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2vw;
+
+}
+
+.page4-right h5{
+    color: gray;
+    font-weight: 500;
+    font-size: 1.2vw;
+    text-transform: uppercase;
+}
