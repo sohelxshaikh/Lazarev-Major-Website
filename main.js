@@ -60,7 +60,7 @@ function mousemoveAnimation() {
 
         })
         elem.addEventListener("mousemove", function (dets) {
-            console.log(dets)
+            
             gsap.to(elem.childNodes[3], {
                 x: dets.x - elem.getBoundingClientRect().x,
                 y: dets.y - elem.getBoundingClientRect().y - 50 + "px"
@@ -94,6 +94,82 @@ function playPauseAnimation() {
     })
 }
 
+
+function page6Animation(){
+    var video = document.querySelector(".page6-right video")
+var vidDiv = document.querySelectorAll(".page6-right")
+
+
+vidDiv.forEach(function(elem){
+    elem.addEventListener("mouseenter",function(){
+            
+            elem.childNodes[5].style.opacity = 1;
+            elem.childNodes[5].play() ;
+            
+})
+elem.addEventListener("mousemove",function(dets){
+    gsap.to(elem.childNodes[1],{
+        opacity:1,
+        scale:1,
+        x: dets.x - elem.childNodes[1].getBoundingClientRect().x +300 ,
+        y: dets.y - elem.childNodes[1].getBoundingClientRect().y ,
+
+    })
+})
+
+    elem.addEventListener("mouseleave",function(dets){
+        gsap.to(elem.childNodes[1],{
+            opacity:0,
+            scale:0,
+           
+            
+        })
+            elem.childNodes[5].style.opacity = 0;
+            elem.childNodes[5].load() ;
+            
+            
+})
+
+})
+
+}
+
+
+vidDiv = document.querySelectorAll(".p6-part2-inner .inner")
+vidDiv.forEach(function(elem){
+    elem.addEventListener("mouseenter",function(){
+        elem.childNodes[7].play()
+        gsap.to(elem.childNodes[7],{
+            opacity:1,
+            height:"80%",
+            duration:.4
+        })
+        
+        gsap.to(elem.childNodes[3],{
+            opacity:0,
+            duration:.4
+            
+        })
+    })
+    elem.addEventListener("mouseleave",function(){
+        
+        gsap.to(elem.childNodes[7],{
+            opacity:0,
+            height:"50%",
+           
+        })
+        
+        gsap.to(elem.childNodes[3],{
+            opacity:1,
+            
+            
+        })
+        
+    })
+})
+
+
 //  mousemoveAnimation();
 //  navAnimation();
 // playPauseAnimation();
+// page6Animation();
