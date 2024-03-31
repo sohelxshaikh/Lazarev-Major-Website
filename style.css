@@ -465,7 +465,7 @@ nav button svg {
 #page5 .grid-item:hover{
     -webkit-box-shadow: 0px 0px 26px -4px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 26px -4px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 26px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 26px -4px rgba(0, 0, 0, 0.247);
 }
 .grid-inner{
     display: flex;
@@ -608,7 +608,7 @@ nav button svg {
     width: 45%;
     height: 100%;
     /* background-color: pink; */
-    border-top:1px solid #3333334f;
+    border-top:2px solid #3333334f;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -644,4 +644,62 @@ nav button svg {
     bottom: 0;
     opacity: 0;
      
+}
+
+
+#page7{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #111;
+    padding: 0 5vw;
+}
+#page7 .p7-upper{
+   
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1.5px solid rgba(128, 128, 128, 0.541);
+   
+    
+}
+#page7 .p7-upper h2{
+    font-size: 4vw;
+    font-weight: 600;
+}
+
+#page7 .p7-lower{
+    min-height: 100vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 5vw;
+}
+
+#page7 .p7-lower>button{
+    padding: 1.1vw 3.5vw;
+    background-color: #0da34e;
+    border: none;
+    border-radius: 50px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+#page7-right {
+    width: 70%;
+}
+
+#page7-right > p {
+    font-size: 2.5vw;
+    line-height: 3vw;
+    width: 95%;
+}
+
+#page7-right > p span {
+    /* background-color: red; */
+    width: 15vw;
+    display: inline-block;
 }
