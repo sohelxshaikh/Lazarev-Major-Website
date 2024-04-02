@@ -703,3 +703,62 @@ nav button svg {
     width: 15vw;
     display: inline-block;
 }
+.page7-content {
+    margin-top: 3vw;
+    padding: 2vw 0;
+    border-top: 1px solid gray;
+    
+}
+
+.page7-content h1
+{
+    font-size: 4vw;
+}
+.page7-content .flex{
+    display: flex;
+    padding: 1.5vw 0;
+    gap: 1vw;
+    
+}
+.page7-content .flex h4{
+    border: 1px solid gray;
+    padding: .2vw 1vw;
+    border-radius: 50px;
+    font-weight: 400;
+    cursor: pointer;
+    margin-bottom: 1vw;
+    
+}
+
+.page7-elem{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #333;
+  
+    position: relative;
+    /* border-bottom: 1px solid #333; */
+}
+.page7-elem h3{
+        font-size: 1.5vw;
+        white-space: nowrap;
+        z-index: 2;
+}
+.page7-elem p{
+    font-size: 0.8vw;
+    width: 50%;
+    padding-top: 2vw;
+    padding-bottom: 4vw;
+    z-index: 2;
+   
+    
+}
+.page7-elem .over{
+    height: 0%;
+    width: 100%;
+    background-color: #33333367;
+    position: absolute;
+    z-index: 1;
+
+}
+
