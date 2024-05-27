@@ -96,7 +96,7 @@ function playPauseAnimation() {
 
 
 function page6Animation() {
-    var video = document.querySelector(".page6-right video")
+  
     var vidDiv = document.querySelectorAll(".page6-right")
 
 
@@ -170,10 +170,25 @@ function page6_ka_bacha_hua_animation() {
     })
 }
 
+function scroll_animation(){
+    gsap.from("#btm-p2 h4,#btm-p3 h4 ,#btm-p4 h4",{
+        x:0,
+        duration:1,
+        scrollTrigger:{
+            trigger:"#btm-p2",
+            start:"top 80%",
+            end:"top 0",
+            markers:true,
+            scroller:"body",
+            stagger:0.6,
+            scrub:true,
+        }
+    })
+}
 
-
-//  mousemoveAnimation();
-//  navAnimation();
-// playPauseAnimation();
-// page6Animation();
-// page6_ka_bacha_hua_animation();
+ mousemoveAnimation();
+ navAnimation();
+playPauseAnimation();
+page6Animation();
+page6_ka_bacha_hua_animation();
+scroll_animation();
