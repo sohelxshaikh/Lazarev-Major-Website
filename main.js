@@ -1,3 +1,39 @@
+function locomotiveAnimation() {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const locoScroll = new LocomotiveScroll({
+        el: document.querySelector("#main"),
+        smooth: true,
+
+        // for tablet smooth
+        tablet: { smooth: true },
+
+        // for mobile
+        smartphone: { smooth: true }
+    });
+    locoScroll.on("scroll", ScrollTrigger.update);
+
+    ScrollTrigger.scrollerProxy("#main", {
+        scrollTop(value) {
+            return arguments.length
+                ? locoScroll.scrollTo(value, 0, 0)
+                : locoScroll.scroll.instance.scroll.y;
+        },
+        getBoundingClientRect() {
+            return {
+                top: 0,
+                left: 0,
+                width: window.innerWidth,
+                height: window.innerHeight
+            };
+        }
+    });
+
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+    ScrollTrigger.refresh();
+}
+
 function navAnimation() {
     var nav = document.querySelector("nav")
 
@@ -96,7 +132,7 @@ function playPauseAnimation() {
 
 
 function page6Animation() {
-  
+
     var vidDiv = document.querySelectorAll(".page6-right")
 
 
@@ -170,24 +206,48 @@ function page6_ka_bacha_hua_animation() {
     })
 }
 
-function scroll_animation(){
-    gsap.from("#btm-p2 h4,#btm-p3 h4 ,#btm-p4 h4",{
-        x:0,
-        duration:1,
-        scrollTrigger:{
-            trigger:"#btm-p2",
-            start:"top 80%",
-            end:"top 0",
-            markers:true,
-            scroller:"body",
-            stagger:0.6,
-            scrub:true,
+function scroll_animation() {
+    gsap.from("#btm-p2 h4,#btm-p3 h4 ,#btm-p4 h4", {
+        x: 0,
+        duration: 1,
+        scrollTrigger: {
+            trigger: "#btm-p2",
+            start: "top 80%",
+           
+            // markers: true,
+            scroller: "#main",
+            stagger: 0.6,
+            scrub: true,
         }
     })
 }
 
- mousemoveAnimation();
- navAnimation();
+var tl = gsap.timeline()
+tl.from("#page1",{
+    opacity:0,
+    borderRadius:"100px",
+    duration:2,
+    ease:"expo.out"
+})
+tl.from("#page1",{
+    transform:"scaleX(0.7) scaleY(0) translateY(-10%)",
+    
+})
+tl.from("nav",{
+    opacity:0
+
+})
+tl.from("#page1 h1 , #page1 p ,#page1 div " ,{
+    
+    opacity:0,
+    stagger:0.3
+})
+
+
+
+locomotiveAnimation()
+mousemoveAnimation();
+navAnimation();
 playPauseAnimation();
 page6Animation();
 page6_ka_bacha_hua_animation();
